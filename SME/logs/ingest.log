@@ -1,0 +1,873 @@
+2025-11-12 16:24:23,832 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:24:23,832 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:24:23,832 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:24:25,393 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:24:25,393 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:24:30,258 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:24:30,258 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:24:35,425 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:24:35,425 [INFO] rag.ingest: Processing 1 new/modified documents...
+2025-11-12 16:24:36,520 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:24:36,520 [INFO] rag.ingest: Loaded a total of 16 documents for ingestion.
+2025-11-12 16:24:36,521 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-12 16:24:36,522 [INFO] rag.ingest: Created 26 child chunks (size=512)
+2025-11-12 16:24:36,522 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-12 16:24:36,544 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:24:36,544 [INFO] rag.ingest: Loaded a total of 16 documents for ingestion.
+2025-11-12 16:24:36,545 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-12 16:24:36,545 [INFO] rag.ingest: Created 26 child chunks (size=512)
+2025-11-12 16:24:36,545 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-12 16:24:36,545 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 42 chunks...
+2025-11-12 16:24:36,637 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-12 16:24:36,637 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-12 16:24:38,100 [INFO] rag.ingest: Creating Pinecone Serverless index: sme-agent-new with dim 768...
+2025-11-12 16:24:48,352 [INFO] rag.ingest: Index sme-agent-new created.
+2025-11-12 16:24:50,486 [INFO] rag.ingest: Processing 16 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-12 16:24:50,486 [INFO] rag.ingest: Embedding 16 chunks with all-mpnet-base-v2...
+2025-11-12 16:24:51,297 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-12 16:24:51,314 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:24:53,109 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-12 16:24:53,109 [INFO] rag.ingest: Processing 26 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-12 16:24:53,109 [INFO] rag.ingest: Embedding 26 chunks with all-mpnet-base-v2...
+2025-11-12 16:24:53,363 [INFO] rag.ingest: Generating sparse vectors for 26 chunks...
+2025-11-12 16:24:53,377 [INFO] rag.ingest: Upserting 26 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:24:54,030 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-12 16:24:54,030 [INFO] rag.ingest: Processing 16 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-12 16:24:54,030 [INFO] rag.ingest: Embedding 16 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:24:54,164 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-12 16:24:54,179 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:24:54,553 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:24:54,553 [INFO] rag.ingest: Processing 26 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-12 16:24:54,553 [INFO] rag.ingest: Embedding 26 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:24:54,670 [INFO] rag.ingest: Generating sparse vectors for 26 chunks...
+2025-11-12 16:24:54,688 [INFO] rag.ingest: Upserting 26 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:24:55,074 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:24:55,074 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-12 16:24:55,084 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:24:55,084 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:25:03,947 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:25:03,947 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:25:04,465 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:25:04,465 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:25:09,086 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:25:09,086 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:25:13,544 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:25:13,544 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:25:13,544 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:25:13,544 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:28:37,999 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:28:37,999 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-12 16:28:37,999 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\CHAPTER 2.pdf
+2025-11-12 16:28:37,999 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:28:39,569 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:28:39,569 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:28:44,563 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:28:44,563 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:28:48,577 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:28:48,578 [INFO] rag.ingest: Processing 2 new/modified documents...
+2025-11-12 16:28:48,718 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-12 16:28:48,772 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-12 16:28:48,772 [INFO] rag.ingest: Loaded a total of 59 documents for ingestion.
+2025-11-12 16:28:48,776 [INFO] rag.ingest: Created 103 parent chunks (size=2048)
+2025-11-12 16:28:48,781 [INFO] rag.ingest: Created 360 child chunks (size=512)
+2025-11-12 16:28:48,782 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-12 16:28:48,823 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-12 16:28:48,848 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:28:48,902 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-12 16:28:48,902 [INFO] rag.ingest: Loaded a total of 75 documents for ingestion.
+2025-11-12 16:28:48,907 [INFO] rag.ingest: Created 119 parent chunks (size=2048)
+2025-11-12 16:28:48,914 [INFO] rag.ingest: Created 386 child chunks (size=512)
+2025-11-12 16:28:48,914 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-12 16:28:48,914 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 505 chunks...
+2025-11-12 16:28:49,265 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-12 16:28:49,265 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-12 16:28:50,978 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-12 16:28:53,387 [INFO] rag.ingest: Processing 103 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-12 16:28:53,387 [INFO] rag.ingest: Embedding 103 chunks with all-mpnet-base-v2...
+2025-11-12 16:28:54,884 [INFO] rag.ingest: Generating sparse vectors for 103 chunks...
+2025-11-12 16:28:55,035 [INFO] rag.ingest: Upserting 103 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:28:57,891 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-12 16:28:57,891 [INFO] rag.ingest: Processing 360 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-12 16:28:57,891 [INFO] rag.ingest: Embedding 360 chunks with all-mpnet-base-v2...
+2025-11-12 16:28:59,406 [INFO] rag.ingest: Generating sparse vectors for 360 chunks...
+2025-11-12 16:28:59,573 [INFO] rag.ingest: Upserting 360 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:29:02,291 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-12 16:29:02,306 [INFO] rag.ingest: Processing 103 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-12 16:29:02,306 [INFO] rag.ingest: Embedding 103 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:29:03,778 [INFO] rag.ingest: Generating sparse vectors for 103 chunks...
+2025-11-12 16:29:03,932 [INFO] rag.ingest: Upserting 103 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:29:05,040 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:29:05,040 [INFO] rag.ingest: Processing 360 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-12 16:29:05,040 [INFO] rag.ingest: Embedding 360 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:29:06,183 [INFO] rag.ingest: Generating sparse vectors for 360 chunks...
+2025-11-12 16:29:06,349 [INFO] rag.ingest: Upserting 360 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:29:08,971 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:29:08,971 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-12 16:29:08,987 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:29:08,987 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:29:18,085 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:29:18,086 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:29:19,651 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:29:19,651 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:29:24,098 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:29:24,098 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:29:28,519 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:29:28,519 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:29:28,519 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:29:28,519 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:29:36,979 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:29:36,981 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:29:38,541 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:29:38,542 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:29:43,389 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:29:43,390 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:29:47,718 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:29:47,718 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:29:47,718 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:29:47,723 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:30:04,056 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:30:04,060 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:30:04,553 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:30:04,553 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:30:09,570 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:30:09,570 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:30:13,828 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:30:13,828 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:30:13,828 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:30:13,828 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:31:33,082 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\GEOG-502.pdf
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\Natural resource.docx
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural resource.pptx
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources.txt
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_byjus.md
+2025-11-12 16:31:33,262 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_gfg.txt
+2025-11-12 16:31:33,262 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:31:34,831 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:31:34,831 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:31:39,295 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:31:39,295 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:31:43,584 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:31:43,584 [INFO] rag.ingest: Processing 7 new/modified documents...
+2025-11-12 16:31:44,100 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-12 16:31:44,338 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-12 16:31:44,364 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-12 16:31:48,586 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-12 16:31:48,586 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-12 16:31:48,844 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-12 16:31:48,846 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-12 16:31:48,846 [INFO] rag.ingest: Loaded a total of 365 documents for ingestion.
+2025-11-12 16:31:48,863 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-12 16:31:48,868 [INFO] rag.ingest: Created 598 parent chunks (size=2048)
+2025-11-12 16:31:48,895 [INFO] rag.ingest: Created 2037 child chunks (size=512)
+2025-11-12 16:31:48,895 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-12 16:31:48,944 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-12 16:31:48,967 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:31:49,017 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-12 16:31:49,403 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-12 16:31:49,659 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-12 16:31:49,665 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-12 16:31:49,684 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-12 16:31:49,685 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-12 16:31:49,695 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-12 16:31:49,695 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-12 16:31:49,696 [INFO] rag.ingest: Loaded a total of 440 documents for ingestion.
+2025-11-12 16:31:49,713 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-12 16:31:49,713 [INFO] rag.ingest: Created 717 parent chunks (size=2048)
+2025-11-12 16:31:49,755 [INFO] rag.ingest: Created 2423 child chunks (size=512)
+2025-11-12 16:31:49,755 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-12 16:31:49,755 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3140 chunks...
+2025-11-12 16:31:51,734 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-12 16:31:51,734 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-12 16:31:53,150 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-12 16:31:55,397 [INFO] rag.ingest: Processing 598 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-12 16:31:55,397 [INFO] rag.ingest: Embedding 598 chunks with all-mpnet-base-v2...
+2025-11-12 16:32:02,847 [INFO] rag.ingest: Generating sparse vectors for 598 chunks...
+2025-11-12 16:32:05,166 [INFO] rag.ingest: Upserting 598 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:32:13,167 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-12 16:32:13,168 [INFO] rag.ingest: Processing 2037 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-12 16:32:13,169 [INFO] rag.ingest: Embedding 2037 chunks with all-mpnet-base-v2...
+2025-11-12 16:32:21,324 [INFO] rag.ingest: Generating sparse vectors for 2037 chunks...
+2025-11-12 16:32:23,914 [INFO] rag.ingest: Upserting 2037 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:32:43,758 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-12 16:32:43,758 [INFO] rag.ingest: Processing 598 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-12 16:32:43,759 [INFO] rag.ingest: Embedding 598 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:32:50,756 [INFO] rag.ingest: Generating sparse vectors for 598 chunks...
+2025-11-12 16:32:53,576 [INFO] rag.ingest: Upserting 598 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:33:00,407 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:33:00,407 [INFO] rag.ingest: Processing 2037 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-12 16:33:00,407 [INFO] rag.ingest: Embedding 2037 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:33:08,162 [INFO] rag.ingest: Generating sparse vectors for 2037 chunks...
+2025-11-12 16:33:10,785 [INFO] rag.ingest: Upserting 2037 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:33:30,544 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:33:30,586 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-12 16:33:30,589 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:33:30,590 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:33:53,861 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:33:53,885 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:33:55,497 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:33:55,497 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:34:01,057 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:34:01,069 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:34:05,475 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:34:05,476 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:34:05,479 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:34:05,480 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:34:14,754 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:34:14,768 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:34:16,349 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:34:16,350 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:34:20,819 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:34:20,825 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:34:24,545 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:34:24,545 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:34:24,545 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:34:24,545 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:34:42,733 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:34:42,754 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:34:44,353 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:34:44,353 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:34:49,389 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:34:49,389 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:34:54,253 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:34:54,253 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:34:54,253 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:34:54,253 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:35:17,069 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:35:17,101 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:35:17,641 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:35:17,642 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:35:23,962 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:35:23,962 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:35:28,516 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:35:28,518 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:35:28,521 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:35:28,522 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:35:50,857 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:35:50,881 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:35:52,479 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:35:52,479 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:35:58,087 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:35:58,088 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:36:02,755 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:36:02,756 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:36:02,758 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:36:02,759 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:36:26,515 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:36:26,536 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:36:27,066 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:36:27,075 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:36:32,842 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:36:32,844 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:36:38,558 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:36:38,560 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:36:38,562 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:36:38,564 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:37:01,368 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:37:01,388 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:37:01,538 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:37:01,539 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:37:07,263 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:37:07,263 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:37:11,669 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:37:11,670 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:37:11,670 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:37:11,670 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:37:30,673 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:37:30,691 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:37:32,285 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:37:32,287 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:37:37,614 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:37:37,615 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:37:43,091 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:37:43,093 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:37:43,095 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:37:43,097 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:38:06,299 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:38:06,327 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:38:06,833 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:38:06,833 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:38:12,258 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:38:12,258 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:38:17,101 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:38:17,102 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:38:17,102 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:38:17,102 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:38:39,181 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:38:39,197 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:38:40,808 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:38:40,808 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:38:46,348 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:38:46,348 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:38:51,447 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:38:51,447 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:38:51,447 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:38:51,447 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:39:16,199 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:39:16,224 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:39:17,826 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:39:17,826 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:39:23,736 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:39:23,737 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:39:29,338 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:39:29,339 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:39:29,342 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:39:29,342 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:39:50,486 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:39:50,500 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:39:52,087 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:39:52,087 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:39:57,375 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:39:57,375 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:40:01,910 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:40:01,926 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:40:01,926 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:40:01,926 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:40:21,040 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:40:21,072 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:40:22,676 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:40:22,676 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:40:28,084 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:40:28,084 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:40:32,261 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:40:32,261 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:40:32,261 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:40:32,261 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:43:09,715 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:43:09,735 [INFO] rag.ingest: DELETION detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_byjus.md
+2025-11-12 16:43:09,735 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:43:10,222 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:43:10,222 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:43:15,237 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:43:15,239 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:43:19,466 [INFO] rag.ingest: Deleting 1 documents from index...
+2025-11-12 16:43:19,466 [INFO] rag.ingest: Deleting 1 documents from Pinecone...
+2025-11-12 16:43:20,762 [WARNING] rag.ingest: No doc_id found for deleted path: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_byjus.md. Cannot delete from index.
+2025-11-12 16:43:20,762 [INFO] rag.ingest: No doc_ids to delete.
+2025-11-12 16:43:20,763 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:43:20,763 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:43:20,764 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:45:26,920 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:45:26,952 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_byjus.md
+2025-11-12 16:45:26,952 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-12 16:45:26,952 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:45:28,513 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:45:28,514 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:45:33,135 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:45:33,135 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:45:37,273 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:45:37,273 [INFO] rag.ingest: Processing 2 new/modified documents...
+2025-11-12 16:45:39,505 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-12 16:45:39,693 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-12 16:45:39,693 [INFO] rag.ingest: Loaded a total of 2 documents for ingestion.
+2025-11-12 16:45:39,693 [INFO] rag.ingest: Created 18 parent chunks (size=2048)
+2025-11-12 16:45:39,698 [INFO] rag.ingest: Created 80 child chunks (size=512)
+2025-11-12 16:45:39,698 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-12 16:45:39,829 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-12 16:45:39,857 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-12 16:45:39,905 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-12 16:45:40,309 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-12 16:45:40,554 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-12 16:45:40,561 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-12 16:45:40,650 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-12 16:45:40,650 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-12 16:45:40,660 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-12 16:45:40,661 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-12 16:45:40,690 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-12 16:45:40,690 [INFO] rag.ingest: Loaded a total of 441 documents for ingestion.
+2025-11-12 16:45:40,709 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-12 16:45:40,714 [INFO] rag.ingest: Created 733 parent chunks (size=2048)
+2025-11-12 16:45:40,753 [INFO] rag.ingest: Created 2492 child chunks (size=512)
+2025-11-12 16:45:40,754 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-12 16:45:40,754 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3225 chunks...
+2025-11-12 16:45:42,841 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-12 16:45:42,841 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-12 16:45:44,125 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-12 16:45:46,696 [INFO] rag.ingest: Processing 18 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-12 16:45:46,696 [INFO] rag.ingest: Embedding 18 chunks with all-mpnet-base-v2...
+2025-11-12 16:45:47,506 [INFO] rag.ingest: Generating sparse vectors for 18 chunks...
+2025-11-12 16:45:47,545 [INFO] rag.ingest: Upserting 18 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:45:49,056 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-12 16:45:49,056 [INFO] rag.ingest: Processing 80 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-12 16:45:49,056 [INFO] rag.ingest: Embedding 80 chunks with all-mpnet-base-v2...
+2025-11-12 16:45:49,365 [INFO] rag.ingest: Generating sparse vectors for 80 chunks...
+2025-11-12 16:45:49,406 [INFO] rag.ingest: Upserting 80 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-12 16:45:50,428 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-12 16:45:50,428 [INFO] rag.ingest: Processing 18 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-12 16:45:50,433 [INFO] rag.ingest: Embedding 18 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:45:50,718 [INFO] rag.ingest: Generating sparse vectors for 18 chunks...
+2025-11-12 16:45:50,754 [INFO] rag.ingest: Upserting 18 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:45:51,135 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:45:51,135 [INFO] rag.ingest: Processing 80 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-12 16:45:51,135 [INFO] rag.ingest: Embedding 80 chunks with BAAI/bge-base-en-v1.5...
+2025-11-12 16:45:51,399 [INFO] rag.ingest: Generating sparse vectors for 80 chunks...
+2025-11-12 16:45:51,440 [INFO] rag.ingest: Upserting 80 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-12 16:45:52,018 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-12 16:45:52,021 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-12 16:45:52,021 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:45:52,021 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:46:01,101 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:46:01,109 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:46:02,672 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:02,672 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:46:07,256 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:07,256 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:46:11,488 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:46:11,490 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:46:11,490 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:46:11,490 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:46:20,096 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:46:20,096 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:46:21,673 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:21,673 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:46:26,229 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:26,229 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:46:30,518 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:46:30,518 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:46:30,521 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:46:30,521 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-12 16:46:39,084 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-12 16:46:39,104 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-12 16:46:40,668 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:40,668 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-12 16:46:45,539 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-12 16:46:45,539 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-12 16:46:49,909 [INFO] rag.ingest: No documents to delete.
+2025-11-12 16:46:49,909 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-12 16:46:49,909 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-12 16:46:49,909 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:24:48,728 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:24:49,271 [INFO] rag.ingest: DELETION detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-17 20:24:49,271 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:24:49,765 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:24:49,765 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:24:54,219 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:24:54,219 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:24:58,563 [INFO] rag.ingest: Deleting 1 documents from index...
+2025-11-17 20:24:58,565 [INFO] rag.ingest: Deleting 1 documents from Pinecone...
+2025-11-17 20:25:00,168 [WARNING] rag.ingest: No doc_id found for deleted path: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md. Cannot delete from index.
+2025-11-17 20:25:00,168 [INFO] rag.ingest: No doc_ids to delete.
+2025-11-17 20:25:00,169 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:25:00,170 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:25:00,170 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:25:08,491 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:25:08,499 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:25:08,966 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:08,966 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:25:13,820 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:13,820 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:25:19,126 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:25:19,127 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:25:19,130 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:25:19,130 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:25:27,342 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:25:27,360 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:25:27,845 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:27,847 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:25:33,318 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:33,319 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:25:37,515 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:25:37,515 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:25:37,515 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:25:37,515 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:25:45,502 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:25:45,518 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:25:45,985 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:45,985 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:25:50,320 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:25:50,320 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:25:54,939 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:25:54,939 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:25:54,940 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:25:54,940 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:26:03,225 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:26:03,232 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:26:03,701 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:03,702 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:26:08,342 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:08,342 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:26:12,343 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:26:12,343 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:26:12,343 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:26:12,343 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:26:20,495 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:26:20,511 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:26:20,976 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:20,976 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:26:25,906 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:25,907 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:26:30,483 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:26:30,484 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:26:30,485 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:26:30,485 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:26:38,325 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:26:38,346 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:26:38,824 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:38,824 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:26:43,121 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:26:43,121 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:26:46,869 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:26:46,869 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:26:46,869 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:26:46,869 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:27:01,205 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:27:01,217 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:27:02,827 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:02,828 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:27:07,165 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:07,165 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:27:11,993 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:27:11,994 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:27:11,994 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:27:11,995 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:27:19,648 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:27:19,648 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:27:20,115 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:20,115 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:27:26,294 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:26,295 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:27:30,004 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:27:30,004 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:27:30,005 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:27:30,005 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:27:38,334 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:27:38,351 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:27:38,889 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:38,890 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:27:43,642 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:27:43,643 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:27:49,190 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:27:49,191 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:27:49,193 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:27:49,193 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:28:04,069 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:28:04,093 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:28:04,627 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:28:04,628 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:28:09,749 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:28:09,750 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:28:14,525 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:28:14,526 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:28:14,530 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:28:14,531 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:32:51,200 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:32:51,218 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-17 20:32:51,220 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:32:51,693 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:32:51,693 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:32:56,202 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:32:56,203 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:33:00,990 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:33:00,990 [INFO] rag.ingest: Processing 1 new/modified documents...
+2025-11-17 20:33:05,710 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-17 20:33:05,712 [INFO] rag.ingest: Loaded a total of 1 documents for ingestion.
+2025-11-17 20:33:05,715 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-17 20:33:05,729 [INFO] rag.ingest: Created 69 child chunks (size=512)
+2025-11-17 20:33:05,730 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-17 20:33:07,173 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-17 20:33:07,205 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-17 20:33:07,335 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-17 20:33:08,165 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-17 20:33:08,683 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-17 20:33:08,712 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-17 20:33:09,041 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-17 20:33:09,042 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-17 20:33:09,068 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-17 20:33:09,070 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-17 20:33:09,134 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-17 20:33:09,135 [INFO] rag.ingest: Loaded a total of 441 documents for ingestion.
+2025-11-17 20:33:09,188 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-17 20:33:09,195 [INFO] rag.ingest: Created 733 parent chunks (size=2048)
+2025-11-17 20:33:09,263 [INFO] rag.ingest: Created 2492 child chunks (size=512)
+2025-11-17 20:33:09,264 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-17 20:33:09,264 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3225 chunks...
+2025-11-17 20:33:13,187 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-17 20:33:13,187 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-17 20:33:14,505 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-17 20:33:17,065 [INFO] rag.ingest: Processing 16 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-17 20:33:17,082 [INFO] rag.ingest: Embedding 16 chunks with all-mpnet-base-v2...
+2025-11-17 20:33:18,082 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-17 20:33:18,141 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-17 20:33:19,783 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-17 20:33:19,784 [INFO] rag.ingest: Processing 69 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-17 20:33:19,785 [INFO] rag.ingest: Embedding 69 chunks with all-mpnet-base-v2...
+2025-11-17 20:33:20,164 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-17 20:33:20,229 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-17 20:33:21,529 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-17 20:33:21,529 [INFO] rag.ingest: Processing 16 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-17 20:33:21,530 [INFO] rag.ingest: Embedding 16 chunks with BAAI/bge-base-en-v1.5...
+2025-11-17 20:33:21,827 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-17 20:33:21,879 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-17 20:33:22,406 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-17 20:33:22,406 [INFO] rag.ingest: Processing 69 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-17 20:33:22,407 [INFO] rag.ingest: Embedding 69 chunks with BAAI/bge-base-en-v1.5...
+2025-11-17 20:33:22,693 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-17 20:33:22,752 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-17 20:33:23,550 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-17 20:33:23,551 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-17 20:33:23,556 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:33:23,556 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-17 20:33:38,325 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-17 20:33:38,343 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-17 20:33:39,925 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:33:39,925 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-17 20:33:44,996 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-17 20:33:44,999 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-17 20:33:49,754 [INFO] rag.ingest: No documents to delete.
+2025-11-17 20:33:49,754 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-17 20:33:49,758 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-17 20:33:49,758 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:13:15,846 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:13:15,873 [INFO] rag.ingest: DELETION detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:13:15,873 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:13:16,610 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:13:16,611 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:13:21,685 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:13:21,685 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:13:26,340 [INFO] rag.ingest: Deleting 1 documents from index...
+2025-11-18 11:13:26,341 [INFO] rag.ingest: Deleting 1 documents from Pinecone...
+2025-11-18 11:13:27,849 [WARNING] rag.ingest: No doc_id found for deleted path: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md. Cannot delete from index.
+2025-11-18 11:13:27,850 [INFO] rag.ingest: No doc_ids to delete.
+2025-11-18 11:13:27,850 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:13:27,852 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:13:27,853 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:13:37,643 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:13:37,655 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:13:39,246 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:13:39,246 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:13:44,160 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:13:44,161 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:13:47,870 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:13:47,871 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:13:47,872 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:13:47,872 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:15:48,731 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:15:48,749 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:15:48,750 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:15:49,523 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:15:49,523 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:15:54,576 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:15:54,576 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:15:59,145 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:15:59,145 [INFO] rag.ingest: Processing 1 new/modified documents...
+2025-11-18 11:16:01,784 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:16:01,785 [INFO] rag.ingest: Loaded a total of 1 documents for ingestion.
+2025-11-18 11:16:01,786 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-18 11:16:01,789 [INFO] rag.ingest: Created 69 child chunks (size=512)
+2025-11-18 11:16:01,790 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-18 11:16:02,028 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-18 11:16:02,054 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-18 11:16:02,126 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-18 11:16:02,617 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-18 11:16:02,925 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-18 11:16:02,946 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-18 11:16:03,117 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-18 11:16:03,118 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-18 11:16:03,139 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-18 11:16:03,140 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-18 11:16:03,173 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:16:03,174 [INFO] rag.ingest: Loaded a total of 441 documents for ingestion.
+2025-11-18 11:16:03,194 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-18 11:16:03,200 [INFO] rag.ingest: Created 733 parent chunks (size=2048)
+2025-11-18 11:16:03,249 [INFO] rag.ingest: Created 2492 child chunks (size=512)
+2025-11-18 11:16:03,250 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-18 11:16:03,252 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3225 chunks...
+2025-11-18 11:16:05,687 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-18 11:16:05,687 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-18 11:16:07,252 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-18 11:16:09,484 [INFO] rag.ingest: Processing 16 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-18 11:16:09,484 [INFO] rag.ingest: Embedding 16 chunks with all-mpnet-base-v2...
+2025-11-18 11:16:10,856 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:16:10,909 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:16:12,830 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-18 11:16:12,831 [INFO] rag.ingest: Processing 69 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-18 11:16:12,832 [INFO] rag.ingest: Embedding 69 chunks with all-mpnet-base-v2...
+2025-11-18 11:16:13,354 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:16:13,400 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:16:14,444 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-18 11:16:14,444 [INFO] rag.ingest: Processing 16 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-18 11:16:14,446 [INFO] rag.ingest: Embedding 16 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:16:14,772 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:16:14,811 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:16:15,272 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:16:15,274 [INFO] rag.ingest: Processing 69 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-18 11:16:15,274 [INFO] rag.ingest: Embedding 69 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:16:15,592 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:16:15,634 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:16:16,334 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:16:16,338 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-18 11:16:16,339 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:16:16,340 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:16:26,508 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:16:26,518 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:16:28,306 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:16:28,308 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:16:33,129 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:16:33,129 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:16:37,214 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:16:37,215 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:16:37,215 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:16:37,216 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:35:53,538 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:35:53,593 [INFO] rag.ingest: DELETION detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:35:53,593 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:35:55,202 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:35:55,202 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:35:59,622 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:35:59,622 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:36:03,721 [INFO] rag.ingest: Deleting 1 documents from index...
+2025-11-18 11:36:03,721 [INFO] rag.ingest: Deleting 1 documents from Pinecone...
+2025-11-18 11:36:04,818 [WARNING] rag.ingest: No doc_id found for deleted path: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md. Cannot delete from index.
+2025-11-18 11:36:04,818 [INFO] rag.ingest: No doc_ids to delete.
+2025-11-18 11:36:04,818 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:36:04,818 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:36:04,818 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:38:29,328 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:38:29,362 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:38:29,363 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:38:30,926 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:38:30,926 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:38:35,334 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:38:35,334 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:38:39,201 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:38:39,201 [INFO] rag.ingest: Processing 1 new/modified documents...
+2025-11-18 11:38:42,045 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:38:42,045 [INFO] rag.ingest: Loaded a total of 1 documents for ingestion.
+2025-11-18 11:38:42,045 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-18 11:38:42,045 [INFO] rag.ingest: Created 69 child chunks (size=512)
+2025-11-18 11:38:42,045 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-18 11:38:42,252 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-18 11:38:42,286 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-18 11:38:42,334 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-18 11:38:42,749 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-18 11:38:42,982 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-18 11:38:43,008 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-18 11:38:43,138 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-18 11:38:43,138 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-18 11:38:43,157 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-18 11:38:43,158 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-18 11:38:43,188 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:38:43,188 [INFO] rag.ingest: Loaded a total of 441 documents for ingestion.
+2025-11-18 11:38:43,205 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-18 11:38:43,210 [INFO] rag.ingest: Created 733 parent chunks (size=2048)
+2025-11-18 11:38:43,247 [INFO] rag.ingest: Created 2492 child chunks (size=512)
+2025-11-18 11:38:43,247 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-18 11:38:43,248 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3225 chunks...
+2025-11-18 11:38:45,242 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-18 11:38:45,244 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-18 11:38:46,333 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-18 11:38:48,810 [INFO] rag.ingest: Processing 16 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-18 11:38:48,810 [INFO] rag.ingest: Embedding 16 chunks with all-mpnet-base-v2...
+2025-11-18 11:38:49,720 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:38:49,751 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:38:52,759 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-18 11:38:52,759 [INFO] rag.ingest: Processing 69 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-18 11:38:52,759 [INFO] rag.ingest: Embedding 69 chunks with all-mpnet-base-v2...
+2025-11-18 11:38:53,268 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:38:53,302 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:38:54,497 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-18 11:38:54,497 [INFO] rag.ingest: Processing 16 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-18 11:38:54,497 [INFO] rag.ingest: Embedding 16 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:38:54,770 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:38:54,814 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:38:55,364 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:38:55,364 [INFO] rag.ingest: Processing 69 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-18 11:38:55,364 [INFO] rag.ingest: Embedding 69 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:38:55,621 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:38:55,655 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:38:56,405 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:38:56,407 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-18 11:38:56,407 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:38:56,407 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:39:05,662 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:39:05,673 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:39:07,248 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:39:07,248 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:39:11,621 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:39:11,621 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:39:15,675 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:39:15,675 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:39:15,676 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:39:15,676 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:42:48,251 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:42:48,273 [INFO] rag.ingest: DELETION detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:42:48,273 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:42:49,864 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:42:49,864 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:42:54,214 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:42:54,214 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:42:57,841 [INFO] rag.ingest: Deleting 1 documents from index...
+2025-11-18 11:42:57,841 [INFO] rag.ingest: Deleting 1 documents from Pinecone...
+2025-11-18 11:42:59,182 [WARNING] rag.ingest: No doc_id found for deleted path: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md. Cannot delete from index.
+2025-11-18 11:42:59,182 [INFO] rag.ingest: No doc_ids to delete.
+2025-11-18 11:42:59,182 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:42:59,182 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:42:59,182 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:44:46,550 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:44:46,572 [INFO] rag.ingest: NEW file detected: C:\Users\vsai2\Documents\LAMA\Major_Project\lma-major-project-the-duo-main\Check-2\Docs\natural_resources_wikipedia.md
+2025-11-18 11:44:46,572 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:44:48,192 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:44:48,192 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:44:52,695 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:44:52,696 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:44:56,873 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:44:56,873 [INFO] rag.ingest: Processing 1 new/modified documents...
+2025-11-18 11:44:59,449 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:44:59,450 [INFO] rag.ingest: Loaded a total of 1 documents for ingestion.
+2025-11-18 11:44:59,451 [INFO] rag.ingest: Created 16 parent chunks (size=2048)
+2025-11-18 11:44:59,453 [INFO] rag.ingest: Created 69 child chunks (size=512)
+2025-11-18 11:44:59,453 [INFO] rag.ingest: Loading all current documents to refit BM25 encoder...
+2025-11-18 11:44:59,695 [INFO] rag.ingest: Loaded 26 documents from 1587401677_BA(H)-Psc-Eco-Eng-BA(P)-II-Natural_Resource.pdf
+2025-11-18 11:44:59,723 [INFO] rag.ingest: Loaded 16 documents from 2629Natural-Resources-5th-Semester.pdf
+2025-11-18 11:44:59,788 [INFO] rag.ingest: Loaded 33 documents from CHAPTER 2.pdf
+2025-11-18 11:45:00,271 [INFO] rag.ingest: Loaded 303 documents from GEOG-502.pdf
+2025-11-18 11:45:00,551 [INFO] rag.ingest: Loaded 57 documents from Geography of Natural Resource and Management course code GeEs1019.pdf
+2025-11-18 11:45:00,563 [INFO] rag.ingest: Loaded 1 documents from Natural resource.docx
+2025-11-18 11:45:00,709 [INFO] rag.ingest: Loaded 1 documents from natural resource.pptx
+2025-11-18 11:45:00,710 [INFO] rag.ingest: Loaded 1 documents from natural_resources.txt
+2025-11-18 11:45:00,729 [INFO] rag.ingest: Loaded 1 documents from natural_resources_byjus.md
+2025-11-18 11:45:00,733 [INFO] rag.ingest: Loaded 1 documents from natural_resources_gfg.txt
+2025-11-18 11:45:00,763 [INFO] rag.ingest: Loaded 1 documents from natural_resources_wikipedia.md
+2025-11-18 11:45:00,763 [INFO] rag.ingest: Loaded a total of 441 documents for ingestion.
+2025-11-18 11:45:00,785 [WARNING] rag.ingest: Skipping empty document: GEOG-502.pdf
+2025-11-18 11:45:00,790 [INFO] rag.ingest: Created 733 parent chunks (size=2048)
+2025-11-18 11:45:00,835 [INFO] rag.ingest: Created 2492 child chunks (size=512)
+2025-11-18 11:45:00,835 [INFO] rag.ingest: Refitting BM25 encoder on entire current corpus...
+2025-11-18 11:45:00,835 [INFO] rag.ingest: Fitting BM25 sparse vector encoder on 3225 chunks...
+2025-11-18 11:45:03,095 [INFO] rag.ingest: BM25 encoder saved to bm25_encoder.pkl
+2025-11-18 11:45:03,096 [INFO] rag.ingest: Building indexes for new/modified chunks...
+2025-11-18 11:45:04,490 [INFO] rag.ingest: Found existing index: sme-agent-new
+2025-11-18 11:45:06,700 [INFO] rag.ingest: Processing 16 chunks for model all-mpnet-base-v2 at size 2048...
+2025-11-18 11:45:06,700 [INFO] rag.ingest: Embedding 16 chunks with all-mpnet-base-v2...
+2025-11-18 11:45:07,529 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:45:07,569 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:45:09,037 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace all-mpnet-base-v2
+2025-11-18 11:45:09,037 [INFO] rag.ingest: Processing 69 chunks for model all-mpnet-base-v2 at size 512...
+2025-11-18 11:45:09,037 [INFO] rag.ingest: Embedding 69 chunks with all-mpnet-base-v2...
+2025-11-18 11:45:09,347 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:45:09,388 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: all-mpnet-base-v2)...
+2025-11-18 11:45:10,489 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace all-mpnet-base-v2
+2025-11-18 11:45:10,489 [INFO] rag.ingest: Processing 16 chunks for model BAAI/bge-base-en-v1.5 at size 2048...
+2025-11-18 11:45:10,489 [INFO] rag.ingest: Embedding 16 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:45:10,773 [INFO] rag.ingest: Generating sparse vectors for 16 chunks...
+2025-11-18 11:45:10,810 [INFO] rag.ingest: Upserting 16 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:45:11,321 [INFO] rag.ingest: ✅ Upsert complete for size 2048, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:45:11,321 [INFO] rag.ingest: Processing 69 chunks for model BAAI/bge-base-en-v1.5 at size 512...
+2025-11-18 11:45:11,321 [INFO] rag.ingest: Embedding 69 chunks with BAAI/bge-base-en-v1.5...
+2025-11-18 11:45:11,573 [INFO] rag.ingest: Generating sparse vectors for 69 chunks...
+2025-11-18 11:45:11,612 [INFO] rag.ingest: Upserting 69 vectors to sme-agent-new (namespace: BAAI_bge-base-en-v1_5)...
+2025-11-18 11:45:12,254 [INFO] rag.ingest: ✅ Upsert complete for size 512, namespace BAAI_bge-base-en-v1_5
+2025-11-18 11:45:12,254 [INFO] rag.ingest: ✅ Pinecone vector stores updated.
+2025-11-18 11:45:12,254 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:45:12,254 [INFO] rag.ingest: --- Ingestion run finished. ---
+2025-11-18 11:45:22,783 [INFO] rag.ingest: --- Starting Delta Ingestion Check ---
+2025-11-18 11:45:22,793 [INFO] rag.ingest: --- Ingestion Check Complete ---
+2025-11-18 11:45:23,309 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:45:23,309 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-11-18 11:45:27,713 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2025-11-18 11:45:27,713 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-11-18 11:45:31,404 [INFO] rag.ingest: No documents to delete.
+2025-11-18 11:45:31,404 [INFO] rag.ingest: No new or modified documents to process.
+2025-11-18 11:45:31,406 [INFO] rag.ingest: ✅ Manifest file updated.
+2025-11-18 11:45:31,406 [INFO] rag.ingest: --- Ingestion run finished. ---

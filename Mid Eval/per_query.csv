@@ -1,0 +1,31 @@
+model,granularity,query,Hit@10,MRR,nDCG@10
+all-mpnet-base-v2,128,What is bauxite used for?,1,0.14285714285714285,0.3333333333333333
+all-mpnet-base-v2,128,Environmental impact of strip mining,1,0.25,0.43067655807339306
+all-mpnet-base-v2,128,What are rare earth elements?,0,0.0,0.0
+all-mpnet-base-v2,128,Process of hydraulic fracturing,1,0.3333333333333333,0.663438677598622
+all-mpnet-base-v2,128,What is geothermal energy?,1,0.3333333333333333,0.5931729515195112
+all-mpnet-base-v2,512,What is bauxite used for?,1,0.5,0.6462302129493455
+all-mpnet-base-v2,512,Environmental impact of strip mining,1,1.0,0.8326783988613894
+all-mpnet-base-v2,512,What are rare earth elements?,1,1.0,1.0
+all-mpnet-base-v2,512,Process of hydraulic fracturing,1,1.0,0.9256850023120645
+all-mpnet-base-v2,512,What is geothermal energy?,1,1.0,1.0
+all-mpnet-base-v2,2048,What is bauxite used for?,1,1.0,0.8175295903539445
+all-mpnet-base-v2,2048,Environmental impact of strip mining,1,1.0,0.972664731083356
+all-mpnet-base-v2,2048,What are rare earth elements?,1,1.0,1.0
+all-mpnet-base-v2,2048,Process of hydraulic fracturing,1,1.0,0.9384745935215792
+all-mpnet-base-v2,2048,What is geothermal energy?,1,1.0,0.9963488021549354
+BAAI/bge-base-en-v1.5,128,What is bauxite used for?,1,1.0,1.0
+BAAI/bge-base-en-v1.5,128,Environmental impact of strip mining,1,0.2,0.430624116386567
+BAAI/bge-base-en-v1.5,128,What are rare earth elements?,0,0.0,0.0
+BAAI/bge-base-en-v1.5,128,Process of hydraulic fracturing,1,0.25,0.43067655807339306
+BAAI/bge-base-en-v1.5,128,What is geothermal energy?,1,1.0,0.8988898126139723
+BAAI/bge-base-en-v1.5,512,What is bauxite used for?,1,0.5,0.6309297535714575
+BAAI/bge-base-en-v1.5,512,Environmental impact of strip mining,1,1.0,0.9830168297915423
+BAAI/bge-base-en-v1.5,512,What are rare earth elements?,1,0.25,0.44130740935663865
+BAAI/bge-base-en-v1.5,512,Process of hydraulic fracturing,1,0.5,0.724035777867186
+BAAI/bge-base-en-v1.5,512,What is geothermal energy?,1,1.0,0.9842184869190973
+BAAI/bge-base-en-v1.5,2048,What is bauxite used for?,1,1.0,0.7977228895450266
+BAAI/bge-base-en-v1.5,2048,Environmental impact of strip mining,1,1.0,0.9971876401972103
+BAAI/bge-base-en-v1.5,2048,What are rare earth elements?,1,1.0,1.0
+BAAI/bge-base-en-v1.5,2048,Process of hydraulic fracturing,1,0.5,0.7725405791675511
+BAAI/bge-base-en-v1.5,2048,What is geothermal energy?,1,1.0,0.9851514063429596
